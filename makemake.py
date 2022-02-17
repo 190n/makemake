@@ -29,7 +29,7 @@ with open('Makefile', 'w') as fp:
 		          'LFLAGS =\n\n'))
 
 	for b in binaries:
-		fp.write(f'{b}_OBJS: {" ".join(objs_per_bin[b])}\n')
+		fp.write(f'{b}_OBJS = {" ".join(objs_per_bin[b])}\n')
 
 	fp.write(('\n'
 	         f'all: {" ".join(binaries)}\n'
