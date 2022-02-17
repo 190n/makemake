@@ -59,6 +59,6 @@ with open('Makefile', 'w') as fp:
 	          '\tscan-build --use-cc=$(CC) make all\n'
 	          '\n'
 	          'format:\n'
-	          '\tclang-format -i -style=file *.{c,h}\n'
+	          '\tclang-format -i -style=file *.[ch]\n'
 	          '\n'
 	         f'.PHONY: all clean scan-build format {" ".join(map(lambda b: f"check{b}", binaries))}\n'))
